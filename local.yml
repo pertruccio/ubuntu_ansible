@@ -1,0 +1,4 @@
+- hosts: generic
+  become: true
+  vars:
+    oh_my_zsh_repo: https://github.com/robbyrussell/oh-my-zsh
