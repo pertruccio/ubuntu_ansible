@@ -49,4 +49,4 @@
 - name: set zsh as default shell
   user: 
     name: root
-    shell: /usr/local/bin/zsh
+    shell: /usr/bin/zsh
