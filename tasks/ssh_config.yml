@@ -1,0 +1,6 @@
+- name: templating .ssh/authorized_keys
+  template:
+    src: "~/.dotfiles/.ssh/authorized_keys"
+    dest: "~/.ssh/authorized_keys"
+    backup: yes
+  notify: restart ssh
