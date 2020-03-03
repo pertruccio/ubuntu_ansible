@@ -2,3 +2,8 @@
   become: true
   vars:
     oh_my_zsh_repo: https://github.com/robbyrussell/oh-my-zsh
+
+  tasks:
+    - include: tasks/packages.yml
+    - include: tasks/install_extras.yml
+    - include: tasks/ohmyzsh.yml
