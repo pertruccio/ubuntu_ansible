@@ -1,12 +1,11 @@
 - name: Install packages
   apt: 
-    name: "{{ item }}"
-    update_cache: true
-    state: present
-    with_item:
+    name: 
       - 'nano'
       - 'tmux'
       - 'zsh'
       - 'neofetch'
       - 'coreutils'
       - 'zsh-syntax-highlighting'
+    update_cache: true
+    state: present
