@@ -7,5 +7,7 @@
       - 'neofetch'
       - 'coreutils'
       - 'zsh-syntax-highlighting'
+      - 'htop'
+      - 'bat'
     update_cache: true
     state: present
