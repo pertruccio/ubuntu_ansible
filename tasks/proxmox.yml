@@ -1,5 +1,5 @@
 - name: Install Proxmox source
-  apt-repository:
+  apt_repository:
     repo: http://download.proxmox.com/debian/pve buster pve-no-subscription
     state: present
     filename: pve-install-repo.list
