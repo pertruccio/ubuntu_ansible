@@ -10,3 +10,11 @@
   apt_key:
     url: http://download.proxmox.com/debian/proxmox-ve-release-6.x.gpg
     state: present
+
+- name: Install Packages
+  apt:
+    name:
+      - 'proxmox-ve'
+      - 'postfix'
+      - 'open-iscsi'
+    state: present
