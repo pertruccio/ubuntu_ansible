@@ -9,3 +9,9 @@
   apt:
     update_cache: yes
     upgrade: dist
+
+- name: restart_nginx
+  become: true
+  service:
+    name: nginx
+    state: restarted

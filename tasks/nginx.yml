@@ -1,0 +1,19 @@
+- name: Install Nginx
+  apt:
+    name: 'nginx'
+    state: present
+    update_cache: yes
+
+- name: remove default Nginx config
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+
+- name: templating Proxmox config for Nginx
+  template:
+    src: "../templates/nginx_proxmox.j2"
+    dest: "/etc/nginx/conf.d/proxmox.conf"
+  notify: restart_nginx
+
+# TODO cert handling
+# certs need to be manually added !!!

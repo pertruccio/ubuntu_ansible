@@ -20,3 +20,4 @@
     - include: handlers/handler.yml
   tasks:
     - include: tasks/proxmox.yml
+    - include: tasks/nginx.yml
