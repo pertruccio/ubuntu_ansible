@@ -3,3 +3,5 @@ alderaan.tech-ninja.de
 kamino.tech-ninja.de
 [generic]
 localhost
+[proxmox]
+kamino.tech-ninja.de

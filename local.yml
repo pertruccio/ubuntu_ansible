@@ -13,3 +13,9 @@
     - include: tasks/ohmyzsh.yml
     - include: tasks/ssh_config.yml
     - include: tasks/disable_login_banner.yml
+
+- hosts: proxmox
+  become: true
+  tasks:
+    - include: tasks/proxmox.yml
+    
