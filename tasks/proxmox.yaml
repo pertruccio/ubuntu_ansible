@@ -1,5 +1,10 @@
-- name: Install Proxmox
+- name: Install Proxmox source
   apt-repository:
     repo: http://download.proxmox.com/debian/pve buster pve-no-subscription
     state: present
     filename: pve-install-repo.list
+
+- name: add GPG Key for Proxmox
+  apt_key:
+    url: http://download.proxmox.com/debian/proxmox-ve-release-6.x.gpg
+    state: present
