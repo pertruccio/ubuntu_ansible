@@ -4,13 +4,9 @@
     state: present
     filename: pve-install-repo.list
     update_cache: no
+  notify: update_upgrade
 
 - name: add GPG Key for Proxmox
   apt_key:
     url: http://download.proxmox.com/debian/proxmox-ve-release-6.x.gpg
     state: present
-
-- name: update Cache
-  apt:
-    update_cache: yes
-    upgrade: dist

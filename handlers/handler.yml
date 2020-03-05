@@ -3,3 +3,9 @@
   service:
     name: ssh
     state: restarted
+
+- name: update_upgrade
+  become: true
+  apt:
+    update_cache: yes
+    upgrade: dist
