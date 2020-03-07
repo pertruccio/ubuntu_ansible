@@ -2,6 +2,7 @@
   become: true
   vars:
     oh_my_zsh_repo: https://github.com/robbyrussell/oh-my-zsh
+    ansible_python_interpreter: /usr/bin/python3
 
   handlers:
     - include: handlers/handler.yml
@@ -16,6 +17,8 @@
 
 - hosts: public_servers
   become: true
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   tasks:
     - include: tasks/ufw.yml
 
