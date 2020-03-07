@@ -14,10 +14,15 @@
     - include: tasks/ssh_config.yml
     - include: tasks/disable_login_banner.yml
 
-- hosts: proxmox
+- hosts: public_servers
   become: true
-  handlers:
-    - include: handlers/handler.yml
   tasks:
-    - include: tasks/proxmox.yml
-    - include: tasks/nginx.yml
+    - include: tasks/ufw.yml
+
+# - hosts: proxmox
+#   become: true
+#   handlers:
+#     - include: handlers/handler.yml
+#   tasks:
+#     - include: tasks/proxmox.yml
+#     - include: tasks/nginx.yml
